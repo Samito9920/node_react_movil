@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@react-navigation/native-stack": "^6.9.12",
     "expo-cli": "^6.3.8"
   }
 }
