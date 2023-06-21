@@ -4,6 +4,7 @@ import { Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Menu from "./components/home/Menu";
 import { StyleSheet } from "react-native";
+import ProfileCard from "./components/home/ProfileCard";
 
 
 const tab = createBottomTabNavigator();
@@ -19,8 +20,10 @@ const Navigation = () => {
             }}>
 
             </tab.Screen>
-
+            
         </tab.Navigator>
+
+    
     )
 
 }
