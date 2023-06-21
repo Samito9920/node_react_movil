@@ -5,6 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Menu from "./components/home/Menu";
 import { StyleSheet } from "react-native";
 import ProfileCard from "./components/home/ProfileCard";
+import ListComponent from "./components/list/List";
 
 
 const tab = createBottomTabNavigator();
@@ -16,6 +17,15 @@ const Navigation = () => {
                 tabBarLabel: "Home",
                 tabBarIcon: ({ color, size }) => {
                     <MaterialCommunityIcons name="home" color={color} size={size} />
+                }
+            }}>
+
+            </tab.Screen>
+
+            <tab.Screen name="list" component={ListComponent} options={{
+                tabBarLabel: "Listado",
+                tabBarIcon: ({ color, size }) => {
+                    <MaterialCommunityIcons name="clipboard" color={color} size={size} />
                 }
             }}>
 
