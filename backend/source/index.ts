@@ -14,6 +14,16 @@ app.get("/ping", (req, res) => {
     res.send("pong")
 })
 
+app.get("/hola/:nombres/:apellidos", (req, res) => {
+    res.setHeader("Content-Type", "application/json");
+    const nombre = req.params.nombres;
+    const apellido = req.params.apellidos;
+    console.log("Alguien a ingresado sus nombres");
+
+    res.send({nombre: nombre, apellido: apellido});
+
+})
+
 app.listen(PORT,() => {
      console.log("server iniciado" + PORT);
 })
