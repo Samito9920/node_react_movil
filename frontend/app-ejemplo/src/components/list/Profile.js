@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Image, Text, Linking } from "react-native";
+import { View, Image, Text, Linking, Pressable } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { StyleSheet } from "react-native";
 
 const instagram_username = <Icon name="instagram" size={30} color="blue"/>
 const portfolio_url = <Icon name="instagram" size={30} color="blue"/>
 
-const Profile = ({task}) => {
+const Profile = ({task, closeProfile}) => {
 
     return (
         <View style={styles.item}>
@@ -32,6 +32,10 @@ const Profile = ({task}) => {
                         {portfolio_url}
                         </Text>
                     </View>
+                    <Pressable style={[styles.button, styles.buttonClose]}
+                                onPress={() => closeProfile()}>
+                                <Text style={styles.textOut}> Cerrar modal</Text>
+                            </Pressable>
                 </View>
             </View>
         </View>

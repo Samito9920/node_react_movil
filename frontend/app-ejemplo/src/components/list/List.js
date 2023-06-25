@@ -65,10 +65,6 @@ const ListComponent = (props) => {
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>
                             <Profile task={task} closeProfile={closeProfile} />
-                            <Pressable style={[styles.button, styles.buttonClose]}
-                                onPress={() => setShowProfile(!showProfile)}>
-                                <Text style={styles.textOut}> Cerrar modal</Text>
-                            </Pressable>
                         </Text>
                     </View>
                 </View>
