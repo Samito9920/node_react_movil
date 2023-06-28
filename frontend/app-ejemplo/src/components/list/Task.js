@@ -16,7 +16,7 @@ const Task = ({task}) => {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: "FFF",
+        backgroundColor: "#FFF",
         padding: 15,
         borderRadius: 10,
         flexDirection: "row",
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         height: 100, borderRadius: 15,
 
     }, itemText:{
-    maxWidth:"80%"
+    maxWidth:"50%",
+    marginLeft: "20%"
     }
 })
 

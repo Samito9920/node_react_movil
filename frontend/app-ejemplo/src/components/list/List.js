@@ -45,7 +45,7 @@ const ListComponent = (props) => {
     return (taskItems &&
         <View style={styles.container}>
             <View style={styles.taskWrapper}>
-                <Text style={styles.sectionTitle}> Se listan los perfiñes</Text>
+                <Text style={styles.sectionTitle}> Se listan los perfiles</Text>
                 <View style={styles.items}>
                     <FlatList data={taskItems} renderItem={({ item, i }) =>
                         <Item task={item} i={i} />
@@ -92,9 +92,11 @@ const styles = StyleSheet.create({
     }, peritem: {
 
     }, centeredView: {
-        flex: 1,
+        width: '70%',
+        paddingLeft: '30%',
         justifyContent: "center",
         alignItems: "center",
+        flex: 1,
         marginTop: 22
     }, modalView: {
         margin: 0,
