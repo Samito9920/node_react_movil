@@ -6,6 +6,7 @@ import Menu from "./components/home/Menu";
 import { StyleSheet } from "react-native";
 import ProfileCard from "./components/home/ProfileCard";
 import ListComponent from "./components/list/List";
+import InpTx from "./components/list/InpTx";
 
 
 const tab = createBottomTabNavigator();
@@ -24,6 +25,15 @@ const Navigation = () => {
 
             <tab.Screen name="list" component={ListComponent} options={{
                 tabBarLabel: "Listado",
+                tabBarIcon: ({ color, size }) => {
+                    <MaterialCommunityIcons name="clipboard" color={color} size={size} />
+                }
+            }}>
+
+            </tab.Screen>
+
+            <tab.Screen name="Input" component={InpTx} options={{
+                tabBarLabel: "Ingresa Texto",
                 tabBarIcon: ({ color, size }) => {
                     <MaterialCommunityIcons name="clipboard" color={color} size={size} />
                 }
