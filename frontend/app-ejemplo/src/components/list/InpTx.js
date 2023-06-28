@@ -15,8 +15,8 @@ export default function InpTx() {
     }, [])
 
     const actualizarDatos = () => {
-        setDatos(0);
-        setNombre(0),
+        setDatos('');
+        setNombre(''),
         setApellido("")
     }
 
@@ -39,7 +39,7 @@ export default function InpTx() {
                 <Form style={styles.formulario1}>
                     <Form.Group style={styles.componente}>
                         <Form.Label style={styles.titulo} >Ingrese tu Nombre: </Form.Label>
-                        <TextInput style={styles.cuadro} value={nombre} onChangeText={handleChangeNombre} />
+                        <TextInput style={styles.cuadro} value={nombre} onChangeText={handleChangeNombre} placeholder="Nombre"/>
                     </Form.Group>
 
                 </Form>
@@ -47,7 +47,7 @@ export default function InpTx() {
                 <Form style={styles.formulario2}>
                     <Form.Group style={styles.componente}>
                         <Form.Label style={styles.titulo}>Ingrese tu Apellido: </Form.Label>
-                        <TextInput style={styles.cuadro} value={apellido} onChangeText={handleChangeApellido} />
+                        <TextInput style={styles.cuadro} value={apellido} onChangeText={handleChangeApellido} placeholder="Apellido"/>
                     </Form.Group>
 
                 </Form>

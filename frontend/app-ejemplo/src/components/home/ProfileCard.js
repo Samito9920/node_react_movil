@@ -6,6 +6,10 @@ import Icon from "react-native-vector-icons/FontAwesome";
 const Google = <Icon  name="google" size={30} color="black" />
 
 const Facebook = <Icon  name="facebook" size={30} color="black" />
+const Instagram = <Icon  name="instagram" size={30} color="black" />
+const Twitter = <Icon  name="twitter" size={30} color="black" />
+
+
 
 
 const ProfileCard = () => {
@@ -29,6 +33,12 @@ const ProfileCard = () => {
                 </Text>
                 <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
                     {Facebook}
+                </Text>
+                <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
+                    {Instagram}
+                </Text>
+                <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
+                    {Twitter}
                 </Text>
             </View>
         </View>
