@@ -8,7 +8,7 @@ import { Configuration, OpenAIApi } from "openai";
 export default function OpenAi() {
     const [data, setData] = useState([]);
     const [busqueda, setBusqueda] = useState('');
-    const apiKey = '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';
+    const apiKey = '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';
 
     useEffect(() => {
 

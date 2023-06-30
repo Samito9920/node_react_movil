@@ -11,7 +11,7 @@ const Google = <Icon  name="google" size={30} color="black" />
 const Facebook = <Icon  name="facebook" size={30} color="black" />
 const Instagram = <Icon  name="instagram" size={30} color="black" />
 const Twitter = <Icon  name="twitter" size={30} color="black" />
-const TikTok = <Icon name="tikTok" size={30} color="black"/>
+const TikTok = <Icon name="tiktok" size={30} color="black"/>
 
 
 const ProfileCard = () => {
@@ -42,7 +42,7 @@ const ProfileCard = () => {
                 <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
                     {Twitter}
                 </Text>
-                <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
+                <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.tiktok.com/es/")}>
                     {TikTok}
                 </Text>
             </View>
