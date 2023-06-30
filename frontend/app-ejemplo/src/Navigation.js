@@ -7,6 +7,7 @@ import { StyleSheet } from "react-native";
 import ProfileCard from "./components/home/ProfileCard";
 import ListComponent from "./components/list/List";
 import InpTx from "./components/list/InpTx";
+import OpenAi from "./components/list/OpenAi";
 
 
 const tab = createBottomTabNavigator();
@@ -38,7 +39,14 @@ const Navigation = () => {
                     <MaterialCommunityIcons name="clipboard" color={color} size={size} />
                 }
             }}>
+            </tab.Screen>
 
+            <tab.Screen name="ChatGpt" component={OpenAi} options={{
+                tabBarLabel: "Consulta con ChatGpt",
+                tabBarIcon: ({ color, size }) => {
+                    <MaterialCommunityIcons name="clipboard" color={color} size={size} />
+                }
+            }}>
             </tab.Screen>
             
         </tab.Navigator>
