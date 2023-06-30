@@ -1,7 +1,9 @@
 import React from "react";
 import { StyleSheet, View, Image, Text, Linking } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
-import dog from '../assets/dogs.png'
+import dog from '../assets/dogs.png';
+import iA from'../assets/IA.jpeg';
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
 
 const Google = <Icon  name="google" size={30} color="black" />
@@ -9,7 +11,7 @@ const Google = <Icon  name="google" size={30} color="black" />
 const Facebook = <Icon  name="facebook" size={30} color="black" />
 const Instagram = <Icon  name="instagram" size={30} color="black" />
 const Twitter = <Icon  name="twitter" size={30} color="black" />
-const TikTok = <Icon name="tiktok" size={30} color="black"/>
+const TikTok = <Icon name="tikTok" size={30} color="black"/>
 
 
 const ProfileCard = () => {
@@ -22,7 +24,7 @@ const ProfileCard = () => {
         <View style={styles.container}>
             <Image source={dog} style={styles.coverPhoto} />
             <View style={styles.avatarContainer}>
-                <Image source={{ uri: user.avatar }} style={styles.avatar} />
+                <Image source={iA} style={styles.avatar} />
                 <Text style={styles.name}>
                     {user.name}
                 </Text>
@@ -40,7 +42,9 @@ const ProfileCard = () => {
                 <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
                     {Twitter}
                 </Text>
-                
+                <Text style={{ color: "blue" }} onPress={() => Linking.openURL("https://www.google.com/")}>
+                    {TikTok}
+                </Text>
             </View>
         </View>
     )
@@ -49,12 +53,12 @@ const ProfileCard = () => {
 
 const styles = StyleSheet.create({
     container : {
-        width: "50%",
+        width: "100%",
         alignItems: "center"
     }, coverPhoto: {
-        width: "100%",
-        height: 200,
-        resizeMode: "cover"
+        width: "80vw",
+        height: "50vh",
+        resizeMode: "cover",
     }, avatarContainer: {
         alignItems: "center",
         marginTop: -75

@@ -8,7 +8,7 @@ import { Configuration, OpenAIApi } from "openai";
 export default function OpenAi() {
     const [data, setData] = useState([]);
     const [busqueda, setBusqueda] = useState('');
-    const apiKey = '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';
+    const apiKey = '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';
 
     useEffect(() => {
 
@@ -16,21 +16,24 @@ export default function OpenAi() {
 
     const configuration = new Configuration({
         apiKey
-      })
-    
+    })
+
     const openai = new OpenAIApi(configuration);
 
     const functionOpenAi = async () => {
         try {
             const response = await openai.createCompletion({
                 model: "text-davinci-003",
-                prompt: `${busqueda}`,
+                prompt: `##Convierte a Binario:  ${busqueda}`,
                 temperature: 0.1,
                 max_tokens: 150,
                 n: 1,
             })
             const data = response.data.choices[0].text;
             setData(data)
+            const tokensConsumed = response.headers.get('x-usage-tokens');
+
+            console.log('Tokens Consumed:', tokensConsumed);
             console.log(data);
         } catch (error) {
             console.log(error);
@@ -72,7 +75,7 @@ export default function OpenAi() {
             </View>
             <Pressable style={styles.boton} onPress={() => functionOpenAi()}>
                 <Text>
-                    preguntar
+                    Enviar
                 </Text>
             </Pressable>
         </View>
