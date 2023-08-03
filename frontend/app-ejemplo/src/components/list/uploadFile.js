@@ -24,7 +24,7 @@ const uploadFile = () => {
                 body: data
             })
             if (response.ok) {
-                setQuestion('')
+                setPregunta('')
                 const responseJSON = await response.json()
                 setResult(responseJSON.text)
             }
@@ -37,44 +37,54 @@ const uploadFile = () => {
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             <Form style={styles.formulario2}>
-                <Button style={styles.boton} onPress={handleFilePicker} />
-                <TextInput title={'Sube el archivo'} style={styles.componente} value={question} onChangeText={setPregunta}
-                    placeholder={'Ingresa tu pregunta'} />
-           
-            <Button style={styles.boton} title={'Enviar archivo'} onPress={handleUpload} />
+                <Button  title={'Sube el archivo'} style={styles.boton} onPress={handleFilePicker} />
+                <TextInput
+                    style={styles.componente}
+                    value={pregunta}
+                    onChangeText={setPregunta}
+                    placeholder={'Ingresa tu pregunta'}
+                />
+                <Button
+                    style={styles.boton}
+                    title={'Enviar archivo'}
+                    onPress={handleUpload}
+                />
             </Form>
         </View>
     )
 }
 const styles = StyleSheet.create({
-    formulario2: {
-        width: '70vw',
-        height: '20vh',
-        flex: 1,
-        backgroundColor: '#f2f2f2',
+        container: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        formulario2: {
+            width: '70%',
+            height: '20%',
+            backgroundColor: '#f2f2f2',
         padding: '20px',
-        margin: '10px'
+        margin: '10px',
+        marginBottom: '20px',
     },
-    pregunta: {
-        backgroundColor: 'white',
-        borderWidth: 1,
-        borderRadius: 10,
-        padding: 10,
-        margin: 10
-    }, boton: {
-        marginTop: 30,
-        width: '10%',
-        height: '25%',
-        backgroundColor: '#FFFF',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: '20px'
-    }, componente: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center'
-    }
-})
-export default uploadFile;
+        boton: {
+            marginTop: 30,
+            width: '10%',
+            height: '25%',
+            backgroundColor: '#FFFF',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: '20px',
+            marginBottom: '20px'
+        },
+        componente: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+           
+        },
+    });
+
+    export default uploadFile;
