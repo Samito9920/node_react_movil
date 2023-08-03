@@ -8,6 +8,7 @@ import ProfileCard from "./components/home/ProfileCard";
 import ListComponent from "./components/list/List";
 import InpTx from "./components/list/InpTx";
 import OpenAi from "./components/list/OpenAi";
+import uploadFile from "./components/list/uploadFile";
 
 
 const tab = createBottomTabNavigator();
@@ -48,7 +49,13 @@ const Navigation = () => {
                 }
             }}>
             </tab.Screen>
-            
+            <tab.Screen name="Subir Archivo"  component={uploadFile} options={{
+                tabBarLabel: "Sube tu documento con ChatGpt",
+                tabBarIcon: ({ color, size }) => {
+                    <MaterialCommunityIcons name="clipboard" color={color} size={size} />
+                }
+            }}>
+            </tab.Screen> 
         </tab.Navigator>
 
     
